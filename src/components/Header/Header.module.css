@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+    header span {
+        height: 100px;
+        width: 5px;
+        margin: 0 8px;
+        background: var(--red);
+    }
+
+.Logo img {
+    height: 100px;
+}
+
+.Sublogo {
+    position: relative;
+}
+    .Sublogo div:first-child {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 5em;
+        color: var(--text);
+        background: none;
+        opacity: 0.5;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+    }
+    .Sublogo div:nth-child(2) {
+        position: absolute;
+        bottom: 0; right: -36px;
+        text-transform: uppercase;
+        letter-spacing: -4px;
+        font-weight: 800;
+        font-size: 2em;
+        color: var(--red);
+    }
