@@ -1,0 +1,85 @@
+.Rover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 3.5em;
+    vertical-align: middle;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(228,228,228,0.5);
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Rover:last-child {
+    border-right: none;
+}
+.Rover:hover {
+    margin-top: -16.5em;
+    height: 20em;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+.Rover:hover .Arrow {
+    transform: rotate(180deg);
+}
+.Rover:hover .Camera,
+.Rover:hover .Button {
+    display: block;
+}
+.Rover:hover .Sol {
+    display: flex;
+    align-items: center;
+}
+
+.RoverLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .RoverLabel > div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.5em;
+    }
+    .RoverLabel > div span + span {
+        font-weight: 600;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        color: var(--green);
+    }
+    .RoverLabel > div + div {
+        font-size: 2em;
+        color: var(--green);
+    }
+
+.Camera,
+.Sol {
+    align-self: flex-start;
+    display: none;
+    margin-top: 1em;
+    padding-left: 4em;
+    font-size: 0.8em;
+    text-transform: none;
+}
+    .Camera li:first-child {
+        margin-top: 0.5em;
+    }
+    .Camera li {
+        margin-top: 0.2em;
+    }
+
+.Sol i {
+    color: var(--green);
+}
+.Sol input {
+    margin-left: 0.5em;
+    width: 3em;
+    text-align: center;
+}
+
+.Button {
+    display: none;
+    margin-top: 1em;
+}

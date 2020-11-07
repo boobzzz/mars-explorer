@@ -10,9 +10,10 @@ export const useRovers = () => {
     useEffect(() => {
         const getRovers = async () => {
             const { body } = await fetchJSON(`${API_ENDPOINT}?api_key=${API_KEY}`)
-            console.log(body.rovers);
             setData(body.rovers)
+            
             if (body.status === 404) setIsError(true)
+            
             setIsLoading(false)
         }
 
