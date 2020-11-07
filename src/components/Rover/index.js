@@ -1,12 +1,17 @@
-import { RiArrowUpCircleLine } from "react-icons/ri";
-import { Checkbox } from '../UI/Checkbox/Checkbox';
-import { Button } from '../UI/Button/Button';
+import { useState } from 'react';
 import { useCheckbox } from './useCheckbox';
 import { useInput } from './useInput';
 
+import { Header } from './Header';
+import { CheckboxList } from './CheckboxList';
+import { Input } from './Input';
+import { Button } from '../UI/Button/RegularBtn/Button';
+import { Overlay } from '../UI/Overlay/Overlay';
+import { Gallery } from '../Gallery/Gallery';
 import classes from './Rover.module.css';
 
 export const Rover = ({ rover }) => {
+    const [isOpen, setIsOpen] = useState(false);
     const { id, name, max_sol, cameras } = rover
     const checkboxes = useCheckbox(cameras)
     const { isChecked, checkboxHandler } = checkboxes
@@ -14,40 +19,31 @@ export const Rover = ({ rover }) => {
     const { value, inputHandler } = input
     
     const getParams = () => {
+        setIsOpen(true)
+
         return [...isChecked, {sol: value}]
     }
 
+    const toggleOverlay = () => setIsOpen(false)
+
     return (
         <div className={classes.Rover}>
-            <div className={classes.RoverLabel}>
-                <div>
-                    <span>{name}</span>
-                    <span>{`${max_sol} sols on mars`}</span>
-                </div>
-                <div className={classes.Arrow}>
-                    <RiArrowUpCircleLine />
-                </div>
+            <div className={classes.Header}>
+                <Header title={name} sols={max_sol} />
             </div>
             <div className={classes.Camera}>
-                <ul>Choose camera:
-                    {cameras.map(camera =>
-                        <li key={camera.id}>
-                            <Checkbox
-                                id={camera.id}
-                                name={camera.name}
-                                changed={checkboxHandler}
-                                checked={isChecked.checked} />
-                        </li>
-                    )}
-                </ul>
+                <CheckboxList data={cameras} handler={checkboxHandler} checked={isChecked.checked} />
             </div>
             <div className={classes.Sol}>
-                <label htmlFor={`sol${id}`}>Sol <i>(Max. {max_sol})</i>:</label>
-                <input type="text" id={`sol${id}`} onChange={inputHandler} value={value}/>
+                <Input id={id} sols={max_sol} value={value} handler={inputHandler} />
             </div>
             <div className={classes.Button}>
                 <Button title="EXPLORE" clicked={getParams} />
             </div>
+            <Overlay
+                isOpen={isOpen}
+                close={toggleOverlay}
+                component={<Gallery />} />
         </div>
     )
 }

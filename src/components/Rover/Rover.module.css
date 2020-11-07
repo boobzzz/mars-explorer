@@ -21,7 +21,7 @@
     height: 20em;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 }
-.Rover:hover .Arrow {
+.Rover:hover .Header > div + div {
     transform: rotate(180deg);
 }
 .Rover:hover .Camera,
@@ -33,23 +33,23 @@
     align-items: center;
 }
 
-.RoverLabel {
+.Header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-    .RoverLabel > div {
+    .Header > div {
         display: flex;
         flex-direction: column;
         margin-right: 0.5em;
     }
-    .RoverLabel > div span + span {
+    .Header > div span + span {
         font-weight: 600;
         font-size: 0.7em;
         text-transform: uppercase;
         color: var(--green);
     }
-    .RoverLabel > div + div {
+    .Header > div + div {
         font-size: 2em;
         color: var(--green);
     }

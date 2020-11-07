@@ -48,13 +48,15 @@ section {
 .RoverContainer {
     width: 100%;
 }
-    .RoverContainer h3 {
-        margin-bottom: 50px;
-        font-size: 1.5em;
-        text-align: center;
-        color: var(--red);
-    }
-    .InnerContainer {
+.RoverContainer h3 {
+    margin-bottom: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--red);
+}
+.InnerContainer {
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        z-index: 11;
     }

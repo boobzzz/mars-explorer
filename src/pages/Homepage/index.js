@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import queryString from 'query-string';
 import { useRovers } from './useRovers';
 import { Header } from '../../components/Header/Header';
@@ -8,6 +8,8 @@ import featureVideo from '../../assets/videos/feature.mp4';
 import classes from './Homepage.module.css';
 
 export const Homepage = () => {
+    const [ open, setOpen ] = useState(false)
+
     const rovers = useRovers()
     const { data, isLoading, isError } = rovers
 
