@@ -1,14 +1,10 @@
 body {
-  --green: #4d91a6;
-  --red: #FC3D21;
-  --text: #e4e4e4;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    --green: #4d91a6;
+    --red: #FC3D21;
+    --text: #e4e4e4;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-anchor: none;
 }

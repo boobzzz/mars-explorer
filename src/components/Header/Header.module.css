@@ -1,16 +1,18 @@
-header {
+.Logo {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 1em;
+    z-index: 15;
 }
-    header span {
+    .Logo span {
         height: 100px;
         width: 5px;
         margin: 0 8px;
         background: var(--red);
     }
 
-.Logo img {
+.LogoImg img {
     height: 100px;
 }
 
@@ -37,3 +39,25 @@ header {
         font-size: 2em;
         color: var(--red);
     }
+
+@media (max-width: 576px) {
+    .Logo span {
+        height: 50px;
+        margin: 0 4px;
+        width: 3px;
+    }
+    .LogoImg img {
+        height: 50px;
+    }
+    .Sublogo div:first-child {
+        font-weight: 700;
+        font-size: 2.5em;
+        -webkit-text-stroke-width: 2px;
+    }
+    .Sublogo div:nth-child(2) {
+        right: -18px;
+        letter-spacing: -2px;
+        font-weight: 800;
+        font-size: 1em;
+    }
+}
