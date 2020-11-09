@@ -33,3 +33,19 @@
     .Images img:hover {
         transform: scale(1.1);
     }
+
+@media (max-width: 992px) {
+    .Images {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .Images {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .Images {
+        grid-template-columns: 1fr 1fr;
+    }
+}

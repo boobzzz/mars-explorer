@@ -83,3 +83,20 @@
     display: none;
     margin-top: 1em;
 }
+
+@media (max-width: 992px) {
+    .Rover {
+        border-right: none;
+        border-bottom: 1px solid rgba(228,228,228,0.5);
+        background: rgba(0,0,0,0.75);
+    }
+    .Rover:last-child {
+        border-bottom: none;
+    }
+    .Rover:hover {
+        position: relative;
+        height: 20em;
+        z-index: 20;
+        background: rgba(0,0,0,0.8);
+    }
+}
