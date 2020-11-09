@@ -1,27 +1,35 @@
-import { useState } from 'react';
-import { useCheckbox } from './useCheckbox';
-import { useInput } from './useInput';
-
 import { Header } from './Header';
-import { CheckboxList } from './CheckboxList';
+import { RadioList } from './RadioList';
 import { Input } from './Input';
 import { Button } from '../UI/Button/RegularBtn/Button';
 import { Overlay } from '../UI/Overlay/Overlay';
-import { Gallery } from '../Gallery/Gallery';
+import { Gallery } from '../Gallery';
+import { useState } from 'react';
+import { useRadio } from './useRadio';
+import { useInput } from './useInput';
+
 import classes from './Rover.module.css';
 
 export const Rover = ({ rover }) => {
-    const [isOpen, setIsOpen] = useState(false);
     const { id, name, max_sol, cameras } = rover
-    const checkboxes = useCheckbox(cameras)
-    const { isChecked, checkboxHandler } = checkboxes
+    
+    const [ isOpen, setIsOpen ] = useState(false)
+    
+    const radio = useRadio()
+    const { radioValue, radioHandler } = radio
+    
     const input = useInput()
-    const { value, inputHandler } = input
+    const { inputValue, inputHandler } = input
+    
+    const [ params, setParams ] = useState([])
     
     const getParams = () => {
         setIsOpen(true)
-
-        return [...isChecked, {sol: value}]
+        
+        setParams({
+            camera: radioValue.toLowerCase(),
+            sol: inputValue
+        })
     }
 
     const toggleOverlay = () => setIsOpen(false)
@@ -32,10 +40,10 @@ export const Rover = ({ rover }) => {
                 <Header title={name} sols={max_sol} />
             </div>
             <div className={classes.Camera}>
-                <CheckboxList data={cameras} handler={checkboxHandler} checked={isChecked.checked} />
+                <RadioList data={cameras} handler={radioHandler} />
             </div>
             <div className={classes.Sol}>
-                <Input id={id} sols={max_sol} value={value} handler={inputHandler} />
+                <Input id={id} sols={max_sol} value={inputValue} handler={inputHandler} />
             </div>
             <div className={classes.Button}>
                 <Button title="EXPLORE" clicked={getParams} />
@@ -43,7 +51,7 @@ export const Rover = ({ rover }) => {
             <Overlay
                 isOpen={isOpen}
                 close={toggleOverlay}
-                component={<Gallery />} />
+                component={<Gallery mission={name.toLowerCase()} params={params} />} />
         </div>
     )
 }

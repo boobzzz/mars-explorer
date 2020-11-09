@@ -63,10 +63,10 @@
     font-size: 0.8em;
     text-transform: none;
 }
-    .Camera li:first-child {
+    .Camera div:first-child {
         margin-top: 0.5em;
     }
-    .Camera li {
+    .Camera div {
         margin-top: 0.2em;
     }
 

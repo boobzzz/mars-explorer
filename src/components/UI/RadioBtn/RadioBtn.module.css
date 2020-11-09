@@ -1,50 +1,52 @@
-.Checkbox {
+.Radio {
     position: relative;
 }
-.Checkbox input {
+.Radio input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-.Checkbox label {
+.Radio label {
     padding-left: 30px;
     font-weight: 400;
     align-items: center;
     transition: all 0.2s;
 }
-.Checkbox:hover label,
-.Checkbox input:checked~label  {
+.Radio:hover label,
+.Radio input:checked ~ label  {
     font-weight: 600;
 }
-.Checkbox .CheckboxCustom {
+.Radio .RadioCustom {
     position: absolute;
     top: 50%;
     left: 0;
     width: 24px;
     height: 24px;
+    border-radius: 50%;
     background: transparent;
     border: 1px solid rgba(228,228,228,0.5);
     transform: translateY(-50%);
     transition: all 0.2s;
 }
-.Checkbox:hover .CheckboxCustom,
-.Checkbox input:checked+label .CheckboxCustom {
+.Radio:hover .RadioCustom,
+.Radio input:checked + label .RadioCustom {
     box-shadow: inset 0px 0px 0px 4px var(--red);
 }
-.Checkbox input:checked+label .CheckboxCustom{
+.Radio input:checked + label .RadioCustom{
     box-shadow: none;
 }
-.Checkbox input+label .CheckboxCustom::after {
+.Radio input + label .RadioCustom::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.2s;
 }
-.Checkbox input:checked+label .CheckboxCustom::after {
+.Radio input:checked + label .RadioCustom::after {
     background: var(--red);
     transform: translate(-50%, -50%) scale(1);
 }

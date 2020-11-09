@@ -1,21 +1,19 @@
-import { useState } from 'react';
-import queryString from 'query-string';
-import { useRovers } from './useRovers';
+import { Loader } from '../../components/UI/Loader/Loader';
+import { NotFound } from '../../components/UI/NotFound/NotFound';
 import { Header } from '../../components/Header/Header';
 import { Rover } from '../../components/Rover';
+import { useRover } from './useRover';
 import featureVideo from '../../assets/videos/feature.mp4';
 
 import classes from './Homepage.module.css';
 
 export const Homepage = () => {
-    const [ open, setOpen ] = useState(false)
-
-    const rovers = useRovers()
+    const rovers = useRover()
     const { data, isLoading, isError } = rovers
 
-    if (isLoading) return <div>...loading data</div>
+    if (isLoading) return <Loader size={200} color="#FC3D21" loading={isLoading} />
 
-    if (isError) return <div>...error loading data</div>
+    if (isError) return <NotFound />
 
     return (
         <>

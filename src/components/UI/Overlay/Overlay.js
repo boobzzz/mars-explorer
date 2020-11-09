@@ -1,20 +1,26 @@
 import Modal from 'react-modal';
 import { Button } from '../Button/CloseBtn/Button';
+import bg from '../../../assets/images/banner.jpg';
 
 const customStyles = {
     overlay: {
+        backgroundColor: 'none',
+        backgroundImage: `url(${bg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
         zIndex: 20
     },
     content: {
         position: 'absolute',
         top: 0, left: 0, right: 0, bottom: 0,
         border: '1px solid #ccc',
-        background: '#fff',
         overflow: 'auto',
         WebkitOverflowScrolling: 'touch',
         borderRadius: '4px',
+        background: 'none',
         outline: 'none',
-        padding: '1em',
+        padding: '1em'
     }
 }
 

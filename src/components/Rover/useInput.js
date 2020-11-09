@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 export const useInput = () => {
-    const [ value, setValue ] = useState('')
+    const [ inputValue, setInputValue ] = useState('')
 
     const inputHandler = (e) => {
         let value = e.target.value
 
-        setValue(value)
+        setInputValue(value)
     }
 
-    return { value, inputHandler }
+    return { inputValue, inputHandler }
 }
