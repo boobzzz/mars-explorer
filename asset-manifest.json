@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mars-explorer/static/css/main.ba5edb56.chunk.css",
-    "main.js": "/mars-explorer/static/js/main.ebd60a59.chunk.js",
-    "main.js.map": "/mars-explorer/static/js/main.ebd60a59.chunk.js.map",
+    "main.css": "/mars-explorer/static/css/main.f367fc62.chunk.css",
+    "main.js": "/mars-explorer/static/js/main.90dbcce2.chunk.js",
+    "main.js.map": "/mars-explorer/static/js/main.90dbcce2.chunk.js.map",
     "runtime-main.js": "/mars-explorer/static/js/runtime-main.380a7dab.js",
     "runtime-main.js.map": "/mars-explorer/static/js/runtime-main.380a7dab.js.map",
-    "static/js/2.3d2215ce.chunk.js": "/mars-explorer/static/js/2.3d2215ce.chunk.js",
-    "static/js/2.3d2215ce.chunk.js.map": "/mars-explorer/static/js/2.3d2215ce.chunk.js.map",
+    "static/js/2.dd6b2649.chunk.js": "/mars-explorer/static/js/2.dd6b2649.chunk.js",
+    "static/js/2.dd6b2649.chunk.js.map": "/mars-explorer/static/js/2.dd6b2649.chunk.js.map",
     "index.html": "/mars-explorer/index.html",
-    "static/css/main.ba5edb56.chunk.css.map": "/mars-explorer/static/css/main.ba5edb56.chunk.css.map",
-    "static/js/2.3d2215ce.chunk.js.LICENSE.txt": "/mars-explorer/static/js/2.3d2215ce.chunk.js.LICENSE.txt",
+    "static/css/main.f367fc62.chunk.css.map": "/mars-explorer/static/css/main.f367fc62.chunk.css.map",
+    "static/js/2.dd6b2649.chunk.js.LICENSE.txt": "/mars-explorer/static/js/2.dd6b2649.chunk.js.LICENSE.txt",
     "static/media/NotFound.module.css": "/mars-explorer/static/media/404.65340466.jpg",
     "static/media/banner.2cb1e4e7.jpg": "/mars-explorer/static/media/banner.2cb1e4e7.jpg",
     "static/media/feature.e8195b4e.mp4": "/mars-explorer/static/media/feature.e8195b4e.mp4",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.380a7dab.js",
-    "static/js/2.3d2215ce.chunk.js",
-    "static/css/main.ba5edb56.chunk.css",
-    "static/js/main.ebd60a59.chunk.js"
+    "static/js/2.dd6b2649.chunk.js",
+    "static/css/main.f367fc62.chunk.css",
+    "static/js/main.90dbcce2.chunk.js"
   ]
 }
