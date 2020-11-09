@@ -94,3 +94,11 @@ section {
         font-size: 1em;
     }
 }
+@media (max-width: 460px) {
+    .Header h1 {
+        font-size: 2.5em;
+    }
+    .Header h3 {
+        font-size: 1em;
+    }
+}
