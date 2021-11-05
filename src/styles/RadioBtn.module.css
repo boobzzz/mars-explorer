@@ -10,11 +10,11 @@
     padding-left: 30px;
     font-weight: 400;
     align-items: center;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
 }
 .Radio:hover label,
 .Radio input:checked ~ label  {
-    font-weight: 600;
+    color: var(--red);
 }
 .Radio .RadioCustom {
     position: absolute;

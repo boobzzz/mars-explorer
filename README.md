@@ -2,7 +2,7 @@
 
 # Mars explorer
 
-Mars Explorer - is basically a gallery of high resolution images of Mars surface, taken by three rovers: Curiosity, Spirit and Oportunity during their missions. The user can interact with the app interface in 3 steps:
+Mars Explorer - is basically a gallery of high resolution images of Mars surface, taken by four rovers: Curiosity, Spirit, Oportunity and Perseverance during their missions. The user can interact with the app interface in 3 steps:
 - Step 1: Choose mission
 - Step 2: Select rover's camera and [sol](https://en.wikipedia.org/wiki/Sol_(day_on_Mars))
 - Step 3: Click "explore" button

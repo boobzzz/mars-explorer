@@ -3,7 +3,7 @@ import { NotFound } from '../UI/NotFound/NotFound';
 import { Button } from '../UI/Button/RegularBtn/Button';
 import { useImages } from './useImages';
 
-import classes from './Gallery.module.css';
+import classes from '../../styles/Gallery.module.css';
 
 export const Gallery = ({ mission, params }) => {
     const images = useImages(mission, params)

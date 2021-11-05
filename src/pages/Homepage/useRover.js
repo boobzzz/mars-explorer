@@ -7,19 +7,19 @@ export const useRover = () => {
     const [ isLoading, setIsLoading ] = useState(true)
     const [ isError, setIsError ] = useState(false)
 
-    useEffect(() => {
-        const getRovers = async () => {
-            try {
-                const { body } = await fetchJSON(`${API_ENDPOINT}?api_key=${API_KEY}`)
-                setData(body.rovers)
-            } catch (e) {
-                setIsError(true)
-                console.log(e)
-            } finally {
-                setIsLoading(false)
-            }
+    const getRovers = async () => {
+        try {
+            const { body } = await fetchJSON(`${API_ENDPOINT}?api_key=${API_KEY}`)
+            setData(body.rovers)
+        } catch (e) {
+            setIsError(true)
+            console.log(e)
+        } finally {
+            setIsLoading(false)
         }
+    }
 
+    useEffect(() => {
         getRovers()
     }, [])
 

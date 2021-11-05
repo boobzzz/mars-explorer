@@ -1,6 +1,6 @@
 import logo from '../../assets/images/logo.png';
 
-import classes from './Header.module.css';
+import classes from '../../styles/Header.module.css';
 
 export const Header = () => {
     return (

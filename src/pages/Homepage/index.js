@@ -4,8 +4,7 @@ import { Header } from '../../components/Header/Header';
 import { Rover } from '../../components/Rover';
 import { useRover } from './useRover';
 import featureVideo from '../../assets/videos/feature.mp4';
-
-import classes from './Homepage.module.css';
+import classes from '../../styles/Homepage.module.css';
 
 export const Homepage = () => {
     const rovers = useRover()
@@ -29,15 +28,13 @@ export const Homepage = () => {
                     <div className={classes.Wrapper}>
                         <div className={classes.Header}>
                             <h1>Explore the Mysteries of the <i>Red Planet</i></h1>
-                            <h3>Experience Mars with the high resolution images of its surface, taken by three rover missions and collected by NASA</h3>
+                            <h3>Experience Mars with the high resolution images of its surface, taken by four rover missions and collected by NASA</h3>
                         </div>
+                        <h3>Choose rover mission to begin exploring</h3>
                         <div className={classes.RoverContainer}>
-                            <h3>Choose rover mission to begin exploring</h3>
-                            <div className={classes.InnerContainer}>
-                                {data.map((item) =>
-                                    <Rover key={item.id} rover={item} />
-                                )}
-                            </div>
+                            {data.map((item) =>
+                                <Rover key={item.id} rover={item} />
+                            )}
                         </div>
                     </div>
                 </section>

@@ -1,4 +1,4 @@
-import classes from './RadioBtn.module.css';
+import classes from '../../../styles/RadioBtn.module.css';
 
 export const RadioBtn = (props) => {
     const { group, id, name } = props
