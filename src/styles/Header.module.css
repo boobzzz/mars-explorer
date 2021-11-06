@@ -1,15 +1,17 @@
+header {
+    padding: 1em;
+}
 .Logo {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 1em;
-    z-index: 15;
+    z-index: 10;
 }
     .Logo span {
-        height: 100px;
+        height: 80px;
         width: 5px;
         margin: 0 8px;
-        background: var(--red);
+        background: var(--green);
     }
 
 .LogoImg img {
@@ -21,23 +23,23 @@
 }
     .Sublogo div:first-child {
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 5em;
-        color: var(--text);
+        font-weight: 800;
+        font-size: 112px;
+        line-height: 80px;
+        letter-spacing: -6px;
         background: none;
-        opacity: 0.5;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--red);
     }
     .Sublogo div:nth-child(2) {
         position: absolute;
-        bottom: 0; right: -36px;
+        bottom: -23px; right: -42px;
         text-transform: uppercase;
         letter-spacing: -4px;
         font-weight: 800;
-        font-size: 2em;
-        color: var(--red);
+        font-size: 37px;
+        color: var(--green);
     }
 
 @media (max-width: 576px) {

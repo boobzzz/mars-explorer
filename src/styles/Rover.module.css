@@ -109,3 +109,16 @@
         column-gap: 1em;
     }
 }
+
+@media (max-width: 678px) {
+    .Camera,
+    .Sol {
+        padding-left: 1em;
+    }
+    .Camera {
+        margin-top: 0.5em;
+    }
+    .Camera > div {
+        grid-template-columns: 1fr;
+    }
+}
