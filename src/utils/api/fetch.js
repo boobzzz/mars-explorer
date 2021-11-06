@@ -7,10 +7,10 @@ export const fetchJSON = async (url, options = {}) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(options.body)
+        body: JSON.stringify(options.body),
     })
 
-    let resp = await fetch(url, options)
+    let resp = await fetch(url, options);
 
     if ((resp.headers.get('Content-Type') || '').includes('application/json')) {
         try {
@@ -20,10 +20,10 @@ export const fetchJSON = async (url, options = {}) => {
             }
         } catch (err) {
             // Bad JSON
-            throw new Error(`Status: ${resp.status}, API: Invalid JSON`)
+            throw new Error(`Status: ${resp.status}, API: Invalid JSON`);
         }
     } else {
         // Bad Content-type
-        throw new Error(`Status: ${resp.status}, API: Invalid mime-type`)
+        throw new Error(`Status: ${resp.status}, API: Invalid mime-type`);
     }
 }

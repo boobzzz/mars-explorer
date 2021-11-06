@@ -1,36 +1,35 @@
 import { Header } from './Header';
 import { RadioList } from './RadioList';
 import { Input } from './Input';
-import { Button } from '../UI/Button/RegularBtn/Button';
+import { RegularBtn } from '../UI/Button/RegularBtn';
 import { Overlay } from '../UI/Overlay/Overlay';
 import { Gallery } from '../Gallery';
 import { useState } from 'react';
-import { useRadio } from './useRadio';
-import { useInput } from './useInput';
-
+import { useRadio } from '../../hooks/useRadio';
+import { useInput } from '../../hooks/useInput';
 import classes from '../../styles/Rover.module.css';
 
 export const Rover = ({ rover }) => {
-    const { id, name, max_sol, cameras } = rover
-    const [ isOpen, setIsOpen ] = useState(false)
-    const [ params, setParams ] = useState([])
+    const { id, name, max_sol, cameras } = rover;
+    const [ isOpen, setIsOpen ] = useState(false);
+    const [ params, setParams ] = useState([]);
     
-    const radio = useRadio()
-    const { radioValue, radioHandler } = radio
+    const radio = useRadio();
+    const { radioValue, radioHandler } = radio;
     
-    const input = useInput()
-    const { inputValue, inputHandler } = input
+    const input = useInput();
+    const { inputValue, inputHandler } = input;
     
     const getParams = () => {
-        setIsOpen(true)
+        setIsOpen(true);
         
         setParams({
             camera: radioValue.toLowerCase(),
             sol: inputValue
-        })
+        });
     }
 
-    const toggleOverlay = () => setIsOpen(false)
+    const toggleOverlay = () => setIsOpen(false);
 
     return (
         <>
@@ -45,7 +44,7 @@ export const Rover = ({ rover }) => {
                     <Input id={id} sols={max_sol} value={inputValue} handler={inputHandler} />
                 </div>
                 <div className={classes.Button}>
-                    <Button title="EXPLORE" clicked={getParams} />
+                    <RegularBtn title="EXPLORE" clicked={getParams} />
                 </div>
             </div>
             <Overlay

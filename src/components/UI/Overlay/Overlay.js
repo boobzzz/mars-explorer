@@ -1,5 +1,5 @@
+import { CloseBtn } from '../Button/CloseBtn';
 import Modal from 'react-modal';
-import { Button } from '../Button/CloseBtn/Button';
 import bg from '../../../assets/images/banner.jpg';
 
 const customStyles = {
@@ -22,17 +22,13 @@ const customStyles = {
         outline: 'none',
         padding: '1em'
     }
-}
+};
 
-export const Overlay = (props) => {
-    const { isOpen, close, component } = props
-
-    return (
-        <Modal
-            isOpen={isOpen}
-            style={customStyles}>
-            {component}
-            <Button clicked={close} />
-        </Modal>
-    )
-}
+export const Overlay = ({ isOpen, close, component }) => (
+    <Modal
+        isOpen={isOpen}
+        style={customStyles}>
+        {component}
+        <CloseBtn clicked={close} />
+    </Modal>
+)
