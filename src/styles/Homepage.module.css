@@ -12,6 +12,11 @@ section {
     margin: auto;
 }
     .Wrapper h3 {
+        font-size: 1.5em;
+        text-align: center;
+        color: var(--green);
+    }
+    .Wrapper > span {
         margin-bottom: 120px;
         font-size: 1.5em;
         text-align: center;
@@ -29,30 +34,34 @@ section {
         object-fit: cover;
     }
 
-.Header {
+.Desc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 1em;
 }
-    .Header h1 {
-        margin-top: 3.5em;
+    .Desc h1 {
+        margin-top: 1em;
         font-weight: 600;
         font-size: 4em;
         letter-spacing: -5px;
         color: white;
     }
-    .Header h1 i {
+    .Desc h1 i {
         font-weight: 800;
         font-style: normal;
         letter-spacing: -5px;
         color: var(--red);
         white-space: nowrap;
     }
-    .Header h3 {
+    .Desc h3 {
         font-size: 2em;
         text-align: center;
         color: var(--text);
     }
 
-.RoverContainer {
+.RoverList {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -65,49 +74,49 @@ section {
 
 
 @media (max-width: 1200px) {
-    .RoverContainer {
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .Header {
-        height: 50%;
-    }
-    .Header h1 {
-        margin-top: 3.5em;
-        font-size: 3em;
-    }
-    .Header h3 {
-        font-size: 1.5em;
-    }
     .Wrapper h3 {
         margin-bottom: 360px;
         font-size: 1.5em;
     }
+    .Desc {
+        height: 50%;
+    }
+    .Desc h1 {
+        margin-top: 3.5em;
+        font-size: 3em;
+    }
+    .Desc h3 {
+        font-size: 1.5em;
+    }
+    .RoverList {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 @media (max-width: 768px) {
-    .Header h1 {
-        margin-top: 3em;
-    }
     .Wrapper h3 {
         font-size: 1em;
+    }
+    .Desc h1 {
+        margin-top: 3em;
     }
 }
 @media (max-width: 576px) {
-    .Header {
-        padding: 0 0.5em;
-    }
-    .Header h1 {
-        margin-top: 2em;
-    }
     .Wrapper h3 {
         font-size: 1em;
     }
+    .Desc {
+        padding: 0 0.5em;
+    }
+    .Desc h1 {
+        margin-top: 2em;
+    }
 }
 @media (max-width: 460px) {
-    .Header h1 {
+    .Desc h1 {
         font-size: 2.5em;
     }
-    .Header h3 {
+    .Desc h3 {
         font-size: 1em;
     }
 }

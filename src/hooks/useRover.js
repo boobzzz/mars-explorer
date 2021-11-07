@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { fetchJSON } from '../../utils/api/fetch';
-import { API_KEY, API_ENDPOINT } from '../../constants/endpoints';
+import { fetchJSON } from '../utils/api/fetch';
+import { API_KEY, API_ENDPOINT } from '../constants/endpoints';
 
 export const useRover = () => {
     const [ data, setData ] = useState([]);

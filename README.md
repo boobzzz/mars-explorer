@@ -1,4 +1,4 @@
-![MExplorer](./public/snapshot.jpg)
+![MExplorer](./public/screenshot.png)
 
 # Mars explorer
 
